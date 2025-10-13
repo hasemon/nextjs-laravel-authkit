@@ -14,7 +14,6 @@ interface User {
 interface AuthState {
   token: string | null;
   user: User | null;
-  isAuthenticated: boolean;
   setToken: (token: string | null) => void;
   setUser: (user: User | null) => void;
   setAuth: (token: string, user: User) => void;
@@ -26,11 +25,10 @@ const useAuthStore = create<AuthState>()(
     (set) => ({
       token: null,
       user: null,
-      isAuthenticated: false,
-      setToken: (token) => set({ token, isAuthenticated: !!token }),
+      setToken: (token) => set({ token }),
       setUser: (user) => set({ user }),
-      setAuth: (token, user) => set({ token, user, isAuthenticated: true }),
-      clearAuth: () => set({ token: null, user: null, isAuthenticated: false }),
+      setAuth: (token, user) => set({ token, user }),
+      clearAuth: () => set({ token: null, user: null }),
     }),
     {
       name: "auth-storage",

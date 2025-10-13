@@ -28,34 +28,22 @@ import { useRouter } from "next/navigation";
 
 const formSchema = z
   .object({
-    name: z.string().min(2, {
-      message: "Name must be at least 2 characters.",
-    }),
     email: z.string().email({
       message: "Invalid email address.",
     }),
     password: z.string().min(8, {
       message: "Password must be at least 8 characters.",
     }),
-    password_confirmation: z.string().min(8, {
-      message: "Password must be at least 8 characters.",
-    }),
-  })
-  .refine((data) => data.password === data.password_confirmation, {
-    message: "Passwords do not match.",
-    path: ["password_confirmation"],
   });
 
-export function RegisterForm() {
+export function LoginForm() {
   const router = useRouter();
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      name: "",
       email: "",
       password: "",
-      password_confirmation: "",
     },
     mode: "onBlur",
     reValidateMode: "onBlur",
@@ -64,13 +52,11 @@ export function RegisterForm() {
   // 2. Define a submit handler.
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      const response = await useAuth.register(values);
-      console.log("response", response);
-        
-      toast.success("Account created successfully");
+      await useAuth.login(values);  
+      toast.success("Login successful");
       router.push(web.Home);
     } catch (error) {
-      toast.error("Failed to create account", {
+      toast.error("Failed to login", {
         description: (error as Error).message,
       });
     } finally {
@@ -82,33 +68,13 @@ export function RegisterForm() {
     <Card>
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <CardHeader>
-          <CardTitle>Create an account</CardTitle>
+          <CardTitle>Login</CardTitle>
           <CardDescription>
-            Enter your information below to create your account
+            Enter your information below to login
           </CardDescription>
         </CardHeader>
         <CardContent className="my-6">
           <FieldGroup>
-            <Controller
-              name="name"
-              control={form.control}
-              render={({ field, fieldState }) => (
-                <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel htmlFor="name">Full Name</FieldLabel>
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="John Doe"
-                    aria-invalid={fieldState.invalid}
-                    required
-                    {...field}
-                  />
-                  {fieldState.invalid && (
-                    <FieldError errors={[fieldState.error]} />
-                  )}
-                </Field>
-              )}
-            />
             <Controller
               name="email"
               control={form.control}
@@ -148,34 +114,13 @@ export function RegisterForm() {
                 </Field>
               )}
             />
-            <Controller
-              name="password_confirmation"
-              control={form.control}
-              render={({ field, fieldState }) => (
-                <Field data-invalid={fieldState.invalid}>
-                  <FieldLabel htmlFor="confirm-password">
-                    Confirm Password
-                  </FieldLabel>
-                  <Input
-                    id="confirm-password"
-                    type="password"
-                    required
-                    aria-invalid={fieldState.invalid}
-                    {...field}
-                  />
-                  {fieldState.invalid && (
-                    <FieldError errors={[fieldState.error]} />
-                  )}
-                </Field>
-              )}
-            />
           </FieldGroup>
         </CardContent>
         <CardFooter>
           <Field orientation="horizontal">
-            <Button type="submit">Create Account</Button>
+            <Button type="submit">Login</Button>
             <FieldDescription>
-              Already have an account? <Link href={web.Login}>Sign in</Link>
+              Don&apos;t have an account? <Link href={web.Register}>Sign up</Link>
             </FieldDescription>
           </Field>
         </CardFooter>

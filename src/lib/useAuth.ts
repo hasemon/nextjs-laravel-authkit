@@ -79,7 +79,7 @@ export const useAuth = {
 
   // Check if user is authenticated
   isAuthenticated(): boolean {
-    return useAuthStore.getState().isAuthenticated;
+    return !!useAuthStore.getState().token;
   },
 
   // Get current user
