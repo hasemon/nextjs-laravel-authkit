@@ -25,6 +25,7 @@ import Link from "next/link";
 import { useAuth } from "@/lib/useAuth";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
+import { Spinner } from "@/components/ui/spinner";
 
 const formSchema = z
   .object({
@@ -118,7 +119,10 @@ export function LoginForm() {
         </CardContent>
         <CardFooter>
           <Field orientation="horizontal">
-            <Button type="submit">Login</Button>
+            <Button type="submit" disabled={form.formState.isSubmitting}>
+              {form.formState.isSubmitting && <Spinner />}
+              Login
+            </Button>
             <FieldDescription>
               Don&apos;t have an account? <Link href={web.Register}>Sign up</Link>
             </FieldDescription>
