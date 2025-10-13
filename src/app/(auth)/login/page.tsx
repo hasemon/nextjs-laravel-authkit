@@ -1,9 +1,11 @@
-import { LoginForm } from "@/components/pages/register/LoginForm";
+import { LoginForm } from "@/components/pages/auth/LoginForm";
 
 export default function Page() {
   return (
-    <div className="max-w-3xl mx-auto py-10">
-      <LoginForm />
+    <div className="bg-background flex min-h-svh flex-col items-center justify-center gap-6 p-6 md:p-10">
+      <div className="w-full max-w-sm">
+        <LoginForm />
+      </div>
     </div>
   );
 }
