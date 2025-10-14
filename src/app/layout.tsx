@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Auth Kit API",
-  description: "Laravel Auth Kit API",
+  title: "Auth Kit",
+  description: "Next Auth Kit",
 };
 
 export default function RootLayout({
