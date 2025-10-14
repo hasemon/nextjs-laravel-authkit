@@ -67,7 +67,7 @@ export function RegisterForm() {
     try {
       await useAuth.register(values);
       toast.success("Account created successfully");
-      router.push(web.Home);
+      router.push(web.home);
     } catch (error) {
       toast.error("Failed to create account", {
         description: (error as AxiosError<{ message?: string }>)?.response?.data?.message || (error as Error).message,
@@ -177,7 +177,7 @@ export function RegisterForm() {
               Create Account
             </Button>
             <FieldDescription className="text-center">
-              Already have an account? <Link href={web.Login}>Sign in</Link>
+              Already have an account? <Link href={web.login}>Sign in</Link>
             </FieldDescription>
           </Field>
         </CardFooter>

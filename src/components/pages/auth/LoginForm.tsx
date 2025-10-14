@@ -52,7 +52,7 @@ export function LoginForm({
     try {
       await useAuth.login(values);
       toast.success("Login successful");
-      router.push(web.Home);
+      router.push(web.home);
     } catch (error) {
       toast.error("Failed to login", {
         description: (error as AxiosError<{ message?: string }>)?.response?.data?.message || (error as Error).message,
@@ -139,7 +139,7 @@ export function LoginForm({
         <Field>
           <FieldDescription className="text-center">
             Don&apos;t have an account?{" "}
-            <Link href={web.Register} className="underline underline-offset-4">
+            <Link href={web.register} className="underline underline-offset-4">
               Sign up
             </Link>
           </FieldDescription>

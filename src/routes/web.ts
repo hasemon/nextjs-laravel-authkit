@@ -1,7 +1,7 @@
 const web = {
-    Home: "/",
-    Register: "/register",
-    Login: "/login",
+    home: "/",
+    register: "/register",
+    login: "/login",
 };
 
 export default web;
