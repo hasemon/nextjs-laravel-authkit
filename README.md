@@ -63,7 +63,7 @@ A modern, production-ready authentication system for Next.js applications that s
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/authkitlarapi.git
+   git clone https://github.com/hasemon/nextjs-laravel-authkit.git
    cd authkitlarapi
    ```
 
