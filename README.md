@@ -2,21 +2,21 @@
 
 A modern, production-ready authentication system for Next.js applications that seamlessly integrates with Laravel Sanctum API. Built with TypeScript, featuring beautiful UI components, state management, and comprehensive form validation.
 
-## ✨ Features
+## Features
 
-- 🔐 **Complete Authentication Flow** - Login, Register, and Logout functionality
-- 🎨 **Modern UI Components** - Built with shadcn/ui and Radix UI primitives
-- 📱 **Responsive Design** - Mobile-first approach with Tailwind CSS
-- 🔄 **State Management** - Zustand for efficient state management with persistence
-- ✅ **Form Validation** - Zod schema validation with React Hook Form
-- 🚀 **TypeScript** - Full type safety throughout the application
-- 🔒 **Token Management** - Automatic token handling and refresh
-- 🌐 **API Integration** - Axios-based HTTP client with interceptors
-- 🎯 **Error Handling** - Comprehensive error handling with user-friendly messages
-- 📦 **Modular Architecture** - Clean, maintainable code structure
-- 🏗️ **Laravel-Inspired Structure** - Follows Laravel conventions and architectural patterns
+- **Complete Authentication Flow** - Login, Register, and Logout functionality
+- **Modern UI Components** - Built with shadcn/ui and Radix UI primitives
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **State Management** - Zustand for efficient state management with persistence
+- **Form Validation** - Zod schema validation with React Hook Form
+- **TypeScript** - Full type safety throughout the application
+- **Token Management** - Automatic token handling and refresh
+- **API Integration** - Axios-based HTTP client with interceptors
+- **Error Handling** - Comprehensive error handling with user-friendly messages
+- **Modular Architecture** - Clean, maintainable code structure
+- **Laravel-Inspired Structure** - Follows Laravel conventions and architectural patterns
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Core Technologies
 
@@ -50,7 +50,7 @@ A modern, production-ready authentication system for Next.js applications that s
 - **PostCSS** - CSS processing
 - **Turbopack** - Fast bundling
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -64,7 +64,7 @@ A modern, production-ready authentication system for Next.js applications that s
 
    ```bash
    git clone https://github.com/hasemon/nextjs-laravel-authkit.git
-   cd authkitlarapi
+   cd nextjs-laravel-authkit
    ```
 
 2. **Install dependencies**
@@ -125,7 +125,7 @@ src/
     └── nav-link-type.d.ts
 ```
 
-## 🏗️ Laravel Architecture Inspiration
+## Laravel Architecture Inspiration
 
 This project is heavily inspired by Laravel's elegant architecture and follows many of its conventions:
 
@@ -155,7 +155,7 @@ This project is heavily inspired by Laravel's elegant architecture and follows m
 
 This approach makes the codebase familiar to Laravel developers while leveraging the power of React and Next.js.
 
-## 🔧 Configuration
+## Configuration
 
 ### Laravel Sanctum Backend Setup
 
@@ -184,7 +184,7 @@ const api = {
 };
 ```
 
-## 🎯 Usage Examples
+## Usage Examples
 
 ### Authentication Hook
 
@@ -250,7 +250,7 @@ The project includes pre-built form components with validation:
 - Form validation using Zod schemas
 - Error handling and loading states
 
-## 🎨 UI Components
+## UI Components
 
 Built with shadcn/ui, the project includes:
 
@@ -259,7 +259,7 @@ Built with shadcn/ui, the project includes:
 - **Feedback Components** - Toast notifications, Spinner
 - **Accessibility** - ARIA labels, keyboard navigation
 
-## 🔒 Security Features
+## Security Features
 
 - **Token Management** - Automatic token storage and refresh
 - **Request Interceptors** - Automatic Bearer token attachment
@@ -267,14 +267,14 @@ Built with shadcn/ui, the project includes:
 - **CSRF Protection** - Laravel Sanctum CSRF tokens
 - **Input Validation** - Client and server-side validation
 
-## 📱 Responsive Design
+## Responsive Design
 
 - Mobile-first approach
 - Responsive navigation
 - Touch-friendly interfaces
 - Optimized for all screen sizes
 
-## 🚀 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 
@@ -306,7 +306,7 @@ We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Next.js](https://nextjs.org/) - The React framework
 - [Laravel Sanctum](https://laravel.com/docs/sanctum) - API authentication
@@ -314,7 +314,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Zustand](https://zustand-demo.pmnd.rs/) - State management
 - [Radix UI](https://www.radix-ui.com/) - Accessible components
 
-## 📞 Support
+## Support
 
 If you have any questions or need help, please:
 
