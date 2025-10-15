@@ -19,7 +19,6 @@ import { useAuth } from "@/lib/useAuth";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 import { Spinner } from "@/components/ui/spinner";
-import { GalleryVerticalEnd } from "lucide-react";
 import { AxiosError } from "axios";
 
 const formSchema = z.object({
@@ -71,15 +70,12 @@ export function LoginForm({
       <FieldGroup>
         <div className="flex flex-col items-center gap-2 text-center">
           <a href="#" className="flex flex-col items-center gap-2 font-medium">
-            <div className="flex size-8 items-center justify-center rounded-md">
-              <GalleryVerticalEnd className="size-6" />
-            </div>
             <span className="sr-only">
-              {process.env.NEXT_PUBLIC_APP_NAME || "Siegecode Inc."}
+              {process.env.NEXT_PUBLIC_APP_NAME || "Nextjs Laravel Auth Kit"}
             </span>
           </a>
           <h1 className="text-xl font-bold">
-            Welcome to {process.env.NEXT_PUBLIC_APP_NAME || "Siegecode Inc."}
+            Login to your account
           </h1>
           <FieldDescription>
             Enter your email below to login to your account
@@ -94,9 +90,7 @@ export function LoginForm({
               <Input
                 id="email"
                 type="email"
-                placeholder={`example@${
-                  process.env.NEXT_PUBLIC_APP_NAME || "siegecode.com"
-                }`}
+                placeholder={`example@mail.com`}
                 aria-invalid={fieldState.invalid}
                 required
                 {...field}
@@ -140,7 +134,7 @@ export function LoginForm({
           <FieldDescription className="text-center">
             Don&apos;t have an account?{" "}
             <Link href={web.register} className="underline underline-offset-4">
-              Sign up
+              Register
             </Link>
           </FieldDescription>
         </Field>

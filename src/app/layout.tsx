@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Auth Kit",
-  description: "Next Auth Kit",
+  title: "Nextjs Laravel Auth Kit",
+  description: "Nextjs Laravel Auth Kit by @hasemon",
 };
 
 export default function RootLayout({

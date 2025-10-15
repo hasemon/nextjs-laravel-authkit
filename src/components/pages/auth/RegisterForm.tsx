@@ -50,7 +50,7 @@ const formSchema = z
 
 export function RegisterForm() {
   const router = useRouter();
-  // 1. Define your form.
+  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -81,7 +81,7 @@ export function RegisterForm() {
     <Card>
       <form onSubmit={form.handleSubmit(onSubmit)}>
         <CardHeader className="text-center">
-          <CardTitle className="text-xl">Create your account</CardTitle>
+          <CardTitle className="text-xl font-bold">Create your account</CardTitle>
           <CardDescription>
             Enter your email below to create your account
           </CardDescription>
@@ -177,7 +177,7 @@ export function RegisterForm() {
               Create Account
             </Button>
             <FieldDescription className="text-center">
-              Already have an account? <Link href={web.login}>Sign in</Link>
+              Already have an account? <Link href={web.login}>Login</Link>
             </FieldDescription>
           </Field>
         </CardFooter>

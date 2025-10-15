@@ -40,11 +40,11 @@ const mainNavItems: NavLinkType[] = [
 
 const rightNavItems: NavLinkType[] = [
   {
-    title: "Sign in",
+    title: "Login",
     href: web.login,
   },
   {
-    title: "Sign up",
+    title: "Register",
     href: web.register,
   },
 ];

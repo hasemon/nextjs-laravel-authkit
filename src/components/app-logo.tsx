@@ -23,7 +23,7 @@ export function AppLogo({ className }: LogoProps) {
 
       <div className="flex justify-center items-center gap-0">
         <h1 className="uppercase text-sm md:text-lg font-bold text-primary leading-tight">
-          {process.env.NEXT_PUBLIC_APP_NAME || "Siegecode Inc."}
+          {process.env.NEXT_PUBLIC_APP_NAME || "Next Laravel Auth Kit"}
         </h1>
       </div>
     </div>
